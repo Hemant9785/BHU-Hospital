@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "442925768496",
+    "project_id": "bhu-hospital",
+    "storage_bucket": "bhu-hospital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442925768496:android:7ae1d02dece8392e2d32f5",
+        "android_client_info": {
+          "package_name": "com.example.bhuhospital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442925768496-pvm1bh27ub14173h7ac6hdrks6k6t3gt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bhuhospital",
+            "certificate_hash": "f0cff5bce765ba66672a95a8fa66c5aad5c98e63"
+          }
+        },
+        {
+          "client_id": "442925768496-sd10gsh2upppukonlbjf66djopokjnuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2o7WIVx6LMOM-hAY2aMDoB-QT05QLIcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442925768496-sd10gsh2upppukonlbjf66djopokjnuh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
