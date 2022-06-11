@@ -31,12 +31,14 @@ public class appoinment_adapter extends RecyclerView.Adapter<appoinment_adapter.
     public class myViewHolder extends RecyclerView.ViewHolder
     {
         private TextView doc_name;
-        private TextView date,isPending;
+        private TextView date,isPending,symptoms,patient_name;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             doc_name = itemView.findViewById(R.id.view_docName);
             date = itemView.findViewById(R.id.view_date);
+            symptoms = itemView.findViewById(R.id.view_symptoms);
+            patient_name = itemView.findViewById(R.id.view_patient_name);
             isPending = itemView.findViewById(R.id.view_pending);
 //            find ids
 //            incomplete
@@ -45,6 +47,8 @@ public class appoinment_adapter extends RecyclerView.Adapter<appoinment_adapter.
         {
             doc_name.setText(note.getName_of_doc());
             date.setText(note.getDate().toString());
+            symptoms.setText(note.getSymptoms());
+            patient_name.setText(note.getName_of_patinet());
             int is = note.isPending();
             if(is==0)
                 isPending.setText("Pending ");

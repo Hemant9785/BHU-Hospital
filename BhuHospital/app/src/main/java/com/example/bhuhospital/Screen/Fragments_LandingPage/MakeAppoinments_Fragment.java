@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,27 +35,31 @@ public class MakeAppoinments_Fragment extends Fragment {
     private EditText et_doc,et_patient,et_email,et_date,et_symptoms;
     private Button apn_btn;
     private Spinner doc_spinner;
-    ArrayList<String> docs = new ArrayList();
+    public static ArrayList<String> docs = new ArrayList();
+    public static ArrayList<String> docsuid = new ArrayList<>();
+    public static ArrayAdapter<String>adapter_;
 
 
     String doc;
+    int ind = 0;
     View rootView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView =  inflater.inflate(R.layout.fragment_make_appoinments_, container, false);
-        docs.add("Hemant Joshi--->Hair Transplant");
-        docs.add("Sonu Joshi----->Cardio Logist");
-        docs.add("Tarun Singh----->NeuroSurgen");
+//        docs.add("Hemant Joshi--->Hair Transplant");
+//        docs.add("Sonu Joshi--->Cardio Logist");
+//        docs.add("Tarun Singh--->NeuroSurgen");
         viewId();
-        ArrayAdapter<String>adapter_ = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item,docs);
+        adapter_= new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item,docs);
         adapter_.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         doc_spinner.setAdapter(adapter_);
         doc_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                doc = docs.get(i);
+//                doc = docs.get(i);
+                ind = i;
 
             }
 
@@ -68,6 +73,12 @@ public class MakeAppoinments_Fragment extends Fragment {
         apn_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                doc = docs.get(ind);
+                String docId = docsuid.get(ind);
+                for(int i=0;i<docs.size();i++)
+                {
+                    Log.e("docs",docs.get(i));
+                }
                 String patient,date,email,symptoms;
 //                doc = et_doc.getText().toString().trim();
                 patient = et_patient.getText().toString().trim();
@@ -81,7 +92,7 @@ public class MakeAppoinments_Fragment extends Fragment {
 
                 DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference(doc);
                 DatabaseReference reference2 = FirebaseDatabase.getInstance().getReference("Appoinments");
-                reference2.child(FirebaseAuth.getInstance().getUid()).setValue(a).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reference2.child(FirebaseAuth.getInstance().getUid()).push().setValue(a).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful())
@@ -91,8 +102,18 @@ public class MakeAppoinments_Fragment extends Fragment {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful())
                                     {
-                                        appoinment_entity note = new appoinment_entity(doc,patient,email,symptoms,date,0);
-                                        LandingPage.note_viewmodel.insert(note);
+                                        reference2.child(docId).push().setValue(a).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful())
+                                                {
+                                                    appoinment_entity note = new appoinment_entity(doc,patient,email,symptoms,date,0);
+                                                }
+
+                                            }
+                                        });
+
+//                                        LandingPage.note_viewmodel.insert(note);
                                     }
                                     else
                                     {

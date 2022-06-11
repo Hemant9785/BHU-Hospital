@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class signin_activity extends AppCompatActivity implements View.OnClickListener {
-
+    boolean isDoc=false;
     TextView txt_view;
     EditText email_et,password_et;
     Button sign_btn;
@@ -60,7 +60,17 @@ public class signin_activity extends AppCompatActivity implements View.OnClickLi
                 String semail,spassword;
                 semail = email_et.getText().toString().trim();
                 spassword = password_et.getText().toString().trim();
+                if(semail.equals("admin@admin.com") && spassword.equals("123456"))
+                {
+                 Intent   i = new Intent(signin_activity.this,AdminActivity.class);
+                 startActivity(i);
+                 return;
+                }
                 if(preProcess(semail,spassword))return ;
+
+
+                if(semail.contains("doc@"))
+                    isDoc=true;
                 Log.e("Authentication ",""+semail+" "+spassword);
                 txt_view.setText("Wait......");
                 mAuth.signInWithEmailAndPassword(semail,spassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -73,10 +83,23 @@ public class signin_activity extends AppCompatActivity implements View.OnClickLi
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     User userProfile = snapshot.getValue(User.class);
-                                    if(userProfile!=null)
+                                    if(userProfile!=null || isDoc)
                                     {
+
                                         MainActivity.user = userProfile;
-                                        Intent i = new Intent(signin_activity.this,LandingPage.class);
+                                        Intent i;
+                                        if(semail.equals("admin@admin.com") && spassword.equals("123456"))
+                                        {
+                                             i = new Intent(signin_activity.this,AdminActivity.class);
+                                        }
+                                        else if(isDoc==true)
+                                        {
+                                            isDoc = false;
+                                            i = new Intent(signin_activity.this,DocActivity.class);
+                                        }
+                                        else
+                                        {i = new Intent(signin_activity.this,LandingPage.class);}
+
                                         startActivity(i);
 
                                     }

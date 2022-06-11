@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BhuHospital">
         <activity
+            android:name=".Screen.AdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Screen.DocActivity"
+            android:exported="true" />
+        <activity
             android:name=".Screen.LandingPage"
             android:exported="true" />
         <activity
