@@ -111,6 +111,7 @@
     <Button
         android:id="@+id/admin_act_addbtn"
         android:layout_width="match_parent"
+        android:backgroundTint="@color/btncolor"
         android:layout_height="wrap_content"
         android:text="Add"
         android:layout_margin="60dp"

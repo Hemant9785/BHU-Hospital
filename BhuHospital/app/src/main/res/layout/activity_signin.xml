@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/silver2"
     tools:context=".Screen.signin_activity">
 
     <TextView
@@ -40,6 +41,7 @@
         android:id="@+id/signin_activity_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/btncolor"
         android:text="SIGN IN"
         android:layout_margin="40dp"
         android:textSize="50dp"

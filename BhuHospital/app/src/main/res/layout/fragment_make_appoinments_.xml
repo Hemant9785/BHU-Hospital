@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/bgcolor"
     android:orientation="vertical"
     tools:context=".Screen.Fragments_LandingPage.MakeAppoinments_Fragment">
 
 
     <TextView
         android:layout_width="match_parent"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Make Appoinment"
@@ -112,6 +114,8 @@
 
     <Button
         android:id="@+id/make_apn_btn"
+        android:backgroundTint="@color/btncolor"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"

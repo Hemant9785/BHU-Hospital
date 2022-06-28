@@ -33,6 +33,7 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_admin);
         viewID();
         btn.setOnClickListener(AdminActivity.this);
+
     }
 
     private void viewID() {

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/bgcolor"
     android:orientation="vertical"
     tools:context=".Screen.Fragments_LandingPage.ViewAppoinments_Fragment">
 
@@ -10,10 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="40sp"
+        android:textStyle="bold"
         android:layout_margin="30dp"
         android:textAlignment="center"
         android:text="Appoinments"/>
    <androidx.recyclerview.widget.RecyclerView
+
+
        android:id="@+id/view_appoinment_recyclerView"
        android:layout_width="match_parent"
        android:layout_margin="10dp"

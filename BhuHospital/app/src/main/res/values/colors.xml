@@ -7,6 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="pink1">#ee9ca7</color>
+    <color name="pink2">#ffdde1</color>
+    <color name="blue1">#2193b0</color>
+    <color name="blue2">#6dd5ed</color>
+    <color name="ailver1">#fdfbfb</color>
+    <color name="silver2">#ebedee</color>
+    <color name="bgcolor">#DF6F51</color>
+    <color name="bgcolor2">#EFC7D4</color>
+    <color name="btncolor">#0A62BA</color>
+
+
+
+
 
 <!--    main activity -->
     <color name="main_top_layout_color">#F5A7A7</color>
