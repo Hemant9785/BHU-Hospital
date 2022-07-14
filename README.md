@@ -15,37 +15,47 @@ A Hospital Managment App with launch screen where user can sign in
 - admin@admin.com   123456 
 
 
+
+
+
+
+
 ## Signin / Register
 
 - Register
 ![register](https://user-images.githubusercontent.com/73743547/176149767-26fd1f9d-4469-4504-9af3-8e7d5d2061dd.jpeg)
 
 - SignIn
-![sign in](https://user-images.githubusercontent.com/73743547/176149782-a83102e6-04b4-4a93-8c2d-db525d2cb874.jpeg)
+
+![sign in](https://user-images.githubusercontent.com/73743547/178906025-5a90e52d-d1ce-4e90-a85f-ffaa2de7463a.jpeg)
 
 
 ## Patinet Activity:
 - Profile
-![patient profile](https://user-images.githubusercontent.com/73743547/176148254-e72489c3-c783-4e4a-884a-e6f1bbc4afbc.jpeg)
+![progile frag](https://user-images.githubusercontent.com/73743547/178906020-723ae11f-8b85-4a71-98e0-05a1fff43751.jpeg)
+
 
 - Make Appoinments
-![patient make appoinment](https://user-images.githubusercontent.com/73743547/176148234-ba1f4ed5-6c17-4feb-8489-6d964e50cc68.jpeg)
+
+![make frag](https://user-images.githubusercontent.com/73743547/178906000-f19b268b-0929-4527-bce3-c84a076dfc2b.jpeg)
+
 
 - View Appoinments
-![patient view appoinment](https://user-images.githubusercontent.com/73743547/176148260-e99ea2e3-ee6d-4ea2-a000-6e0b87a557fb.jpeg)
 
+
+![view frag](https://user-images.githubusercontent.com/73743547/178906033-83ab88eb-f8df-45fb-957c-f853a3561966.jpeg)
 
 ## Doc Activity:
 
 - Doc
 
-![doc](https://user-images.githubusercontent.com/73743547/176148766-dd337390-2f5d-4196-87f0-bc217dfd447c.jpeg)
+![doc page](https://user-images.githubusercontent.com/73743547/178905966-a1c37293-7fde-4e44-87a5-5e5d97e568a5.jpeg)
 
 
 ## Admin:
 - add doc
 
-![admin](https://user-images.githubusercontent.com/73743547/176149408-a28f7c07-f77f-4f1a-8dcb-2b750e07fb0a.jpeg)
+![admin](https://user-images.g![front page](https://user-images.githubusercontent.com/73743547/178905992-10fc80ea-c162-435d-9c36-16c74b585a6e.jpeg)
 
 
 
