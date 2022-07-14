@@ -23,7 +23,9 @@ A Hospital Managment App with launch screen where user can sign in
 ## Signin / Register
 
 - Register
-![register](https://user-images.githubusercontent.com/73743547/176149767-26fd1f9d-4469-4504-9af3-8e7d5d2061dd.jpeg)
+
+
+![register2](https://user-images.githubusercontent.com/73743547/178907017-c95421d0-dee5-4ba4-af23-153fecd653da.jpeg)
 
 - SignIn
 
@@ -32,6 +34,8 @@ A Hospital Managment App with launch screen where user can sign in
 
 ## Patinet Activity:
 - Profile
+
+
 ![progile frag](https://user-images.githubusercontent.com/73743547/178906020-723ae11f-8b85-4a71-98e0-05a1fff43751.jpeg)
 
 
@@ -55,7 +59,7 @@ A Hospital Managment App with launch screen where user can sign in
 ## Admin:
 - add doc
 
-![admin](https://user-images.g![front page](https://user-images.githubusercontent.com/73743547/178905992-10fc80ea-c162-435d-9c36-16c74b585a6e.jpeg)
+![admin2](https://user-images.githubusercontent.com/73743547/178906974-9bb2c106-320a-402d-a0cb-3f4cd6cf8d6f.jpeg)
 
 
 
